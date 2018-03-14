@@ -1,0 +1,40 @@
+{
+  "name": "express-mongoose-jwt-restful",
+  "version": "1.0.0",
+  "description": "RESTful API implementation using express and mongoose with JWT secured endpoints",
+  "main": "index.js",
+  "repository": "git@github.com:gurucharanmk/express-mongoose-jwt-restful.git",
+  "author": "Gurucharan MK",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "test": "echo \"Test isn't implemented \"",
+    "build": "babel src/ -d dist/",
+    "dev": "nodemon src --exec babel-node --presets babel-preset-env"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.67.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  }
+}
