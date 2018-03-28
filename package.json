@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "pretty": "prettier --single-quote --write \"src/**/*.js\"",
     "lint": "eslint src",
     "precommit": "lint-staged",
     "test": "echo \"Test isn't implemented \"",
@@ -25,16 +25,21 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
-    "flow-bin": "^0.67.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "nodemon": "^1.17.2",
     "prettier": "^1.11.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
   }
 }
