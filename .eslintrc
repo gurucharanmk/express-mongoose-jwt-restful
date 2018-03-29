@@ -1,13 +1,20 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "plugins": [
     "react",
-    "flowtype",
     "jsx-a11y",
-    "import"
+    "import",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "arrow-parens": ["error", "as-needed"]
   },
   "env": {
     "jest": true
