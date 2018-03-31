@@ -14,7 +14,9 @@
         "singleQuote": true
       }
     ],
-    "arrow-parens": ["error", "as-needed"]
+    "arrow-parens": ["error", "as-needed"],
+    "radix": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"]
   },
   "env": {
     "jest": true
