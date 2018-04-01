@@ -11,9 +11,10 @@
     "pretty": "prettier --single-quote --write \"src/**/*.js\"",
     "lint": "eslint src",
     "precommit": "lint-staged",
-    "test": "echo \"Test isn't implemented \"",
+    "test": "NODE_ENV=test echo \"Test isn't implemented \"",
     "build": "babel src/ -d dist/",
-    "dev": "NODE_ENV=development nodemon src --exec babel-node --presets babel-preset-env"
+    "dev": "NODE_ENV=development nodemon src --exec babel-node --presets babel-preset-env",
+    "prod": "NODE_ENV=production node dist"
   },
   "lint-staged": {
     "*.js": [
