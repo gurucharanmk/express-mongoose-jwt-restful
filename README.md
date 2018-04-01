@@ -10,10 +10,9 @@ Currently we are able to serve the simple endpoint, and project is under develop
 | ------ | ------ |
 | ES2015 support | Used latest available language feature through [babel](https://babeljs.io/) |
 | Linting support | Used [Airbnb Javascript coding guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) through [ESlint](https://eslint.org/) |
-| Code formatting | Used [prettier](https://prettier.io/) to format the code along with linting |
+| Code formating | Used [prettier](https://prettier.io/) to format the code along with linting |
 | Monitor source changes | Used [nodemon](https://nodemon.io/) to monitor / watch source code changes |
-| Pre-commit hooks | Used [husky](https://github.com/typicode/husky) hook to pre-commit git hook and [lint-staged](https://github.com/okonet/lint-staged) to get the staged changes |
-|Environment configuration | Used [dotenv](https://github.com/motdotla/dotenv)  to configure the setup through ".env" file |
+| Pre-commit hooks | Used [husky](https://github.com/typicode/husky) hook to pre-commit git hook and [lint-staged](https://github.com/okonet/lint-staged) to get the changes |
 
 ### Project setup
 ```sh
@@ -21,20 +20,15 @@ $ git clone https://github.com/gurucharanmk/express-mongoose-jwt-restful.git
 $ cd express-mongoose-jwt-restful
 $ #Install all npm dependencies
 $ yarn install
-$ #Update environmental variables corresponds to setup
-$ mv .env-sample .env
-$ #Edit .env according to requirement using your favorite editor
 $ #Start development server
 $ yarn dev
-$ #Formatting local code modifications
+$ #Formating local code modifiations
 $ yarn pretty
-$ #Linting local code modifications
+$ #Linting local code modifiations
 $ yarn lint
 $ #Start server for production mode
 $ yarn build
-$ yarn prod
-$ #Start server for test mode (Not implemented yet)
-$ yarn test
+$ node dist
 ```
 
 ## Contributing and Participating
