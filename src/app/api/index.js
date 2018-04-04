@@ -1,11 +1,8 @@
 import { Router } from 'express';
+import todo from './todo';
 
 const router = new Router();
 
-router.get('/', (req, res) => {
-  res.json({
-    status: 'Success'
-  });
-});
+router.use('/todo', todo);
 
 export default router;
