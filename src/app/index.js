@@ -4,6 +4,6 @@ import api from './api';
 import config from '../config';
 
 db.connect(config.db.uri);
-app.use('/', api);
+app.use('/api', api);
 
 export default app;
