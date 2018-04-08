@@ -14,6 +14,7 @@ const development = {
     }
   }
 };
+
 const production = {
   server: {
     port: parseInt(process.env.PROD_SERV_PORT)
@@ -25,6 +26,7 @@ const production = {
     }
   }
 };
+
 const test = {
   server: {
     port: parseInt(process.env.TEST_SERV_PORT)
