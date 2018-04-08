@@ -4,11 +4,13 @@ const todoSchema = new Schema(
   {
     title: {
       type: String,
-      required: true
+      trim: true,
+      required: 'Please provide valid title'
     },
     description: {
       type: String,
-      required: true
+      trim: true,
+      required: 'Please provide valid description'
     },
     status: {
       type: String,

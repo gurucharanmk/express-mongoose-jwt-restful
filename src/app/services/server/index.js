@@ -1,4 +1,3 @@
-// @flow
 import express from 'express';
 import globalMiddlewares from './globalMiddlewares';
 
