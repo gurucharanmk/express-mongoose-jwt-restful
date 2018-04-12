@@ -6,7 +6,7 @@ import config from '../config';
 
 db.connect(config.db.uri);
 app.use('/api', api);
-app.use('*', errorNotFound);
+app.use(errorNotFound);
 app.use(errorHandler);
 
 export default app;
