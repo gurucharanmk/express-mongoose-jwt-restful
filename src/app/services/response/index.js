@@ -50,19 +50,19 @@ export const successResponse = (req, res, status = OK) => content => {
   return null;
 };
 
-export const filterDatabaseResult = dbResult => {
+export const filterDatabaseResult = (dbResult, filter) => {
   if (dbResult === null) return null;
-  const extractFields = ['status', 'title', 'description'];
   return Array.isArray(dbResult)
     ? dbResult.reduce((fResult, obj) => {
-        fResult.push({
-          title: obj.title,
-          status: obj.status,
-          description: obj.description
-        });
+        fResult.push(
+          filter.reduce(
+            (result, filed) => Object.assign(result, { [filed]: obj[filed] }),
+            {}
+          )
+        );
         return fResult;
       }, [])
-    : extractFields.reduce(
+    : filter.reduce(
         (result, filed) => Object.assign(result, { [filed]: dbResult[filed] }),
         {}
       );
