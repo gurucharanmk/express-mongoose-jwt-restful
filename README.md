@@ -1,5 +1,6 @@
 
 
+
 # express-mongoose-jwt-restful (Development in progress)
 
 ### Overview
@@ -66,6 +67,11 @@ $ yarn test
 $ yarn pretty
 $ yarn lint
 ```
+## Roadmap
+ - [Passport.js](http://www.passportjs.org/) support
+ - Social login with [Facebook](http://www.facebook.com/) using the OAuth 2.0 API
+ - Supporting store  JWT in cookies for web applications
+ - A minimal frontend
 
 ## Contributing and Participating
 We welcome and encourage participation in the project under [this guidance](https://github.com/gurucharanmk/express-mongoose-jwt-restful/blob/master/CODE_OF_CONDUCT.md)
