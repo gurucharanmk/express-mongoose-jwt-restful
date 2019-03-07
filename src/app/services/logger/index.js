@@ -19,7 +19,7 @@ const logOptions = {
   }
 };
 
-const logger = new winston.Logger({
+const logger = winston.createLogger({
   transports: [
     new winston.transports.File(logOptions.fileLogger),
     new winston.transports.Console(logOptions.consoleLogger)
