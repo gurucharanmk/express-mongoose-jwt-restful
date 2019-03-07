@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import { BAD_REQUEST } from 'http-status';
 
 const todoSchema = new Schema(
   {
@@ -25,21 +26,30 @@ const todoSchema = new Schema(
 
 todoSchema.post('findOne', (res, next) => {
   if (res == null) {
-    return next(Error('Invalid Id is passed'));
+    let err = Error('Invalid resource id');
+    err.statusCode = BAD_REQUEST;
+    err.errorInformation = { error: 'Invaid resource id' };
+    return next(err);
   }
   return next();
 });
 
 todoSchema.post('findOneAndUpdate', (res, next) => {
   if (res == null) {
-    return next(Error('Invalid Id is passed'));
+    let err = Error('Invalid resource id');
+    err.statusCode = BAD_REQUEST;
+    err.errorInformation = { error: 'Invaid resource id' };
+    return next(err);
   }
   return next();
 });
 
 todoSchema.post('findOneAndRemove', (res, next) => {
   if (res == null) {
-    return next(Error('Invalid Id is passed'));
+    let err = Error('Invalid resource id');
+    err.statusCode = BAD_REQUEST;
+    err.errorInformation = { error: 'Invaid resource id' };
+    return next(err);
   }
   return next();
 });

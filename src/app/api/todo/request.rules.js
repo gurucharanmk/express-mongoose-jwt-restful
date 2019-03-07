@@ -9,7 +9,7 @@ export const validateBody = [
     .isLength({ min: 6 })
     .trim(),
   body('status', 'Invalid status')
-    .isIn(['Not Started', 'In Progress', 'Completed'])
+    .isIn(['Not Started', 'In Progress', 'Completed', ''])
     .trim(),
   sanitizeBody('*')
     .trim()

@@ -2,6 +2,7 @@ import { SERVICE_UNAVAILABLE, NOT_FOUND, OK } from 'http-status';
 import logger from '../logger';
 
 export const errorHandler = (err, req, res, next) => {
+  console.dir(err);
   if (err.statusCode) {
     logger.error(
       `http_status:${err.statusCode}, error_info:${JSON.stringify(
@@ -56,14 +57,14 @@ export const filterDatabaseResult = (dbResult, filter) => {
     ? dbResult.reduce((fResult, obj) => {
         fResult.push(
           filter.reduce(
-            (result, filed) => Object.assign(result, { [filed]: obj[filed] }),
+            (result, field) => Object.assign(result, { [field]: obj[field] }),
             {}
           )
         );
         return fResult;
       }, [])
     : filter.reduce(
-        (result, filed) => Object.assign(result, { [filed]: dbResult[filed] }),
+        (result, field) => Object.assign(result, { [field]: dbResult[field] }),
         {}
       );
 };

@@ -2,7 +2,7 @@ import { CREATED, ACCEPTED } from 'http-status';
 import Todo from './model';
 import { successResponse, filterDatabaseResult } from '../../services/response';
 
-const fullFilter = ['status', 'title', 'description'];
+const fullFilter = ['status', 'title', 'description', '_id'];
 
 export const readOne = (req, res, next) => {
   Todo.findById(req.params.id)
@@ -13,9 +13,8 @@ export const readOne = (req, res, next) => {
 
 export const readAll = (req, res, next) => {
   Todo.find({})
-    .then(
-      result =>
-        result.length !== 0 ? filterDatabaseResult(result, fullFilter) : []
+    .then(result =>
+      result.length !== 0 ? filterDatabaseResult(result, fullFilter) : []
     )
     .then(successResponse(req, res))
     .catch(err => next(err));
